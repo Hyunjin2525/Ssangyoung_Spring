@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.container{
+	margin-top:50px;
+}
+.row{
+	margin:0px auto;
+	width: 960px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" th:each="vo:${list}">
+				<div class="thumbnail">
+				  <a href="#">
+				    <img th:src="${vo.poster}" alt="Lights" style="width:100%">
+				      <div class="caption">
+				        <p style="font-size: 9px;" th:text="${vo.title}"></p>
+				      </div>
+				    </a>
+			  	</div>
+			</div>
+		</div>
+		<div style="height: 10px"></div>
+		<div class="row">
+			<div class="text-center">
+				<ul class="pagination">
+				  <li><a href="#" >1</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
